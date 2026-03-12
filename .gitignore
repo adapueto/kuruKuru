@@ -1,0 +1,9 @@
+# Configuración local sensible — no subir credenciales
+includes/db.php
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
