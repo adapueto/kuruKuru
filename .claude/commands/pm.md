@@ -11,9 +11,10 @@ Cuando te invoco con $ARGUMENTS:
 3. Sugerí cuál es el próximo paso concreto a hacer hoy
 
 **Si recibo "iniciar fase N"** — preparar la sesión de trabajo:
-1. Mostrá el objetivo y las tareas pendientes del issue correspondiente
-2. Sugerí crear una branch `fase-N` para trabajar
-3. Recordá la definición de terminado de esa fase
+1. Mostrá el objetivo y las tareas pendientes del issue correspondiente (consultá el issue #N en GitHub)
+2. Creá la branch `fase-N` en GitHub usando el MCP (owner: adapueto, repo: kuruKuru, base: main)
+3. Indicá el comando git para que el usuario la descargue localmente: `git checkout -b fase-N origin/fase-N`
+4. Recordá la definición de terminado de esa fase
 
 **Si recibo "terminar fase N"** — cerrar la fase:
 1. Verificá que todas las tareas del issue estén completas
