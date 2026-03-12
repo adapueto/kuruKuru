@@ -1,1 +1,53 @@
-# Flujo de trabajo diario — KuruKuru\n\n## Arrancar la sesión (5 min)\n\n```\n/pm iniciar fase N\n```\n```bash\ngit checkout -b fase-N origin/fase-N\n```\n\n---\n\n## Durante el día — repetir por cada tarea\n\n1. Intentá la tarea sola primero\n2. ¿Te trabaste? → `/fase [qué querés hacer]`\n3. Escribís el código → el hook corre `php -l` automático al guardar\n4. Terminás la tarea → `/revisar [archivo]`\n5. Corregís lo que señaló\n6. `/commit`\n\n> En cualquier momento: `/explicar [fragmento]` si no entendés algo\n\n---\n\n## Cerrar el día (10 min)\n\n```\n/simplify\n```\n```\n/pm terminar fase N\n```\n```bash\ngit push origin fase-N\n```\nAbrir Pull Request: `fase-N` → `main` en GitHub\n\n---\n\n## Referencia rápida de comandos\n\n| Comando | Cuándo usarlo |\n|---------|-------------- |\n| `/pm iniciar fase N` | Al arrancar el día |\n| `/pm terminar fase N` | Al terminar la fase |\n| `/pm estado` | Para ver progreso general |\n| `/fase [descripción]` | Cuando te trabás en una tarea |\n| `/revisar [archivo]` | Code review al terminar una tarea |\n| `/explicar [código]` | Cuando no entendés algo |\n| `/simplify` | Revisión final de calidad |\n| `/commit` | Antes de cada commit |\n
+# Flujo de trabajo diario — KuruKuru
+
+## Arrancar la sesión (5 min)
+
+```
+/pm iniciar fase N
+```
+```bash
+git checkout -b fase-N origin/fase-N
+```
+
+---
+
+## Durante el día — repetir por cada tarea
+
+1. Intentá la tarea sola primero
+2. ¿Te trabaste? → `/fase [qué querés hacer]`
+3. Escribís el código → el hook corre `php -l` automático al guardar
+4. Terminás la tarea → `/revisar [archivo]`
+5. Corregís lo que señaló
+6. `/commit`
+
+> En cualquier momento: `/explicar [fragmento]` si no entendés algo
+
+---
+
+## Cerrar el día (10 min)
+
+```
+/simplify
+```
+```
+/pm terminar fase N
+```
+```bash
+git push origin fase-N
+```
+Abrir Pull Request: `fase-N` → `main` en GitHub
+
+---
+
+## Referencia rápida de comandos
+
+| Comando | Cuándo usarlo |
+|---------|--------------|
+| `/pm iniciar fase N` | Al arrancar el día |
+| `/pm terminar fase N` | Al terminar la fase |
+| `/pm estado` | Para ver progreso general |
+| `/fase [descripción]` | Cuando te trabás en una tarea |
+| `/revisar [archivo]` | Code review al terminar una tarea |
+| `/explicar [código]` | Cuando no entendés algo |
+| `/simplify` | Revisión final de calidad |
+| `/commit` | Antes de cada commit |
