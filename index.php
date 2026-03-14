@@ -15,11 +15,13 @@ require 'includes/db.php';
     <h1>KuruKuru</h1>
     <div class="grilla">
         <?php foreach ($animes as $anime): ?>
-            <div class="card">
-                <img src="<?= $anime['imagen_url'] ?>" alt="<?= $anime['titulo'] ?>">
-                <h2><?= $anime['titulo'] ?></h2>
-                <p><?= $anime['anio'] ?> — <?= $anime['temporada'] ?></p>
-            </div>
+            <a href="anime.php?id=<?= $anime['mal_id'] ?>">
+                <div class="card">
+                    <img src="<?= $anime['imagen_url'] ?>" alt="<?= $anime['titulo'] ?>">
+                    <h2><?= $anime['titulo'] ?></h2>
+                    <p><?= $anime['anio'] ?> — <?= $anime['temporada'] ?></p>
+                </div>
+            </a>
         <?php endforeach; ?>
     </div>
 </body>
