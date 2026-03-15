@@ -10,6 +10,10 @@ require 'includes/db.php';
         WHERE mal_id = ?");
     $sql->execute([$id]);
     $anime = $sql->fetch();
+    if (!$anime) {
+        header('Location: index.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +21,7 @@ require 'includes/db.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $anime['titulo'] ?></title>
+    <title><?= htmlspecialchars($anime['titulo']) ?></title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>

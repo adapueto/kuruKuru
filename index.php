@@ -1,7 +1,7 @@
 <?php
 require 'includes/db.php';
 
-    $sql = $pdo->query("SELECT * FROM animes");
+    $sql = $pdo->query("SELECT mal_id, titulo, anio, temporada, imagen_url FROM animes");
     $animes = $sql->fetchAll();
 ?>
 
@@ -18,7 +18,7 @@ require 'includes/db.php';
     <h1>KuruKuru</h1>
     <div class="grilla">
         <?php foreach ($animes as $anime): ?>
-            <a href="anime.php?id=<?= $anime['mal_id'] ?>">
+            <a href="anime.php?id=<?= htmlspecialchars($anime['mal_id']) ?>">
                 <div class="card">
                     <img src="<?= htmlspecialchars($anime['imagen_url']) ?>" alt="<?= htmlspecialchars($anime['titulo']) ?>">
                     <h2><?= htmlspecialchars($anime['titulo']) ?></h2>
