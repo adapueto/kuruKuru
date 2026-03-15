@@ -17,9 +17,9 @@ require 'includes/db.php';
         <?php foreach ($animes as $anime): ?>
             <a href="anime.php?id=<?= $anime['mal_id'] ?>">
                 <div class="card">
-                    <img src="<?= $anime['imagen_url'] ?>" alt="<?= $anime['titulo'] ?>">
-                    <h2><?= $anime['titulo'] ?></h2>
-                    <p><?= $anime['anio'] ?> — <?= $anime['temporada'] ?></p>
+                    <img src="<?= htmlspecialchars($anime['imagen_url']) ?>" alt="<?= htmlspecialchars($anime['titulo']) ?>">
+                    <h2><?= htmlspecialchars($anime['titulo']) ?></h2>
+                    <p><?= htmlspecialchars($anime['anio']) ?> — <?= htmlspecialchars($anime['temporada']) ?></p>
                 </div>
             </a>
         <?php endforeach; ?>
