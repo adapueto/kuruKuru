@@ -9,9 +9,12 @@ require 'includes/db.php';
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KuruKuru</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <div class="contenedor">
     <h1>KuruKuru</h1>
     <div class="grilla">
         <?php foreach ($animes as $anime): ?>
@@ -23,6 +26,7 @@ require 'includes/db.php';
                 </div>
             </a>
         <?php endforeach; ?>
+    </div>
     </div>
 </body>
 </html>

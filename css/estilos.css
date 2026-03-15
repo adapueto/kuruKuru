@@ -1,0 +1,156 @@
+/* ===== Variables ===== */
+:root {
+    --color-acento: #e91e8c;
+    --color-acento-claro: #f9a8d4;
+    --fuente-base: 'Segoe UI', sans-serif;
+    --color-borde: rgba(42, 42, 42, 0.7);
+    --color-borde-card: #3d3d3d;
+}
+
+/* ===== Reset y base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: var(--fuente-base);
+    min-height: 100vh;
+}
+
+/* ===== Contenedor principal ===== */
+.contenedor {
+    background-color: var(--color-borde);
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    padding-bottom: 2rem;
+}
+
+.contenedor--angosto {
+    max-width: 600px;
+    border: 2px solid var(--color-borde-card);
+}
+
+/* ===== Header ===== */
+h1 {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    font-size: 2.5rem;
+    color: var(--color-acento);
+    letter-spacing: 2px;
+}
+
+/* ===== Grilla de cards ===== */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+
+}
+
+/* ===== Card ===== */
+.grilla a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    background-color: #1a1a2e;
+    border: 1px solid var(--color-borde-card);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    font-size: 0.75rem;
+    padding: 0 0.75rem 0.75rem;
+    color: #888;
+    text-transform: capitalize;
+}
+
+/* ===== Página de detalle ===== */
+.detalle {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detalle img {
+    width: 250px;
+    border-radius: 8px;
+    border: 2px solid var(--color-borde-card);
+}
+
+.info {
+    background-color: rgba(80, 80, 80, 0.35);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.info .score {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-acento-claro);
+    margin-top: 1rem;
+}
+
+.detalle h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-acento);
+}
+
+.detalle p {
+    color: #aaa;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+/* ===== Responsive: mobile ===== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .detalle img {
+        width: 180px;
+    }
+}
