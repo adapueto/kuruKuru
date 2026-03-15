@@ -27,8 +27,19 @@ require 'includes/db.php';
         <img src="<?= htmlspecialchars($anime['imagen_url']) ?>" alt="<?= htmlspecialchars($anime['titulo']) ?>">
         <div class="info">
             <h2><?= htmlspecialchars($anime['titulo']) ?></h2>
-            <p><?= htmlspecialchars($anime['anio']) ?> — <?= htmlspecialchars($anime['temporada']) ?></p>
-            <p class="score">Score: <?= htmlspecialchars($anime['score']) ?></p>
+            <div class="info__columnas">
+                <div class="info__datos">
+                    <p><?= htmlspecialchars($anime['anio']) ?> — <?= htmlspecialchars($anime['temporada']) ?></p>
+                    <p class="score">Score: <?= htmlspecialchars($anime['score']) ?></p>
+                </div>
+                <div class="info__synopsis">
+                    <?php if ($anime['synopsis']): ?>
+                        <p><?= htmlspecialchars($anime['synopsis']) ?></p>
+                    <?php else: ?>
+                        <p>Sin descripción disponible.</p>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </div>
     </div>
